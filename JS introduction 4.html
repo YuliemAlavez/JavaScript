@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validar datos</title>
+</head>
+<body>
+	<h1>Validando datos</h1>
+
+	<p >Introduce un numero entre 1 y 10</p>
+	
+	<input id="num" type="number">
+
+	<button type="button" onclick="myFunction()">Enviar</button>
+
+	<p id="demo"></p>
+	
+	<script>
+		var x, text;
+		function myFunction(){
+			var x= document.getElementById('num').value;
+			if(isNaN(x)|| x<1 || x>10){
+				text = "Valores invalidos";
+			}
+			else{
+				text = "Valores correctos";
+			}
+			
+			document.getElementById('demo').innerHTML= text;
+		}
+	</script>
+</body>
+</html>
